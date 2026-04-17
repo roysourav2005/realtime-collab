@@ -8,6 +8,6 @@ export const initSocket = async () => {
         transports: ['websocket'],
     };
 
-    // 🔥 FIX: Direct backend URL
-    return io("http://localhost:5000", options);
+    // ✅ FINAL FIX: use same domain (works in deployment)
+    return io("/", options);
 };
